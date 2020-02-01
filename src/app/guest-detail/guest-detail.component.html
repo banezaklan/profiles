@@ -1,0 +1,33 @@
+<mat-toolbar color="primary" class="main-toolbar">
+  <mat-toolbar-row>
+    <span>
+      <h1 routerLink="/" class="app-brand">Profile:</h1>
+    </span>
+    <span *ngIf="guest">
+      <img src="{{guest.photo}}" alt="{{guest.first_name + ' ' + guest.last_name}}"/>
+    </span>
+    <span *ngIf="guest" class="example-fill-remaining-space">
+      {{guest.first_name + ' ' + guest.last_name}}
+    </span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <span id="tab-toolbar-offset">&nbsp;</span>
+    <span class="example-fill-remaining-space">
+
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div *ngIf="guest">
+  <mat-drawer-container class="content-container">
+    <mat-drawer mode="side" opened class="side-drawer">
+      <app-quick-facts></app-quick-facts>
+    </mat-drawer>
+    <mat-drawer-content>
+      <mat-tab-group>
+        <mat-tab label="Profile Detail"><app-profile-details-form [guest]="guest"></app-profile-details-form></mat-tab>
+        <mat-tab label="Profile ID's">Profile ID's Content</mat-tab>
+        <mat-tab label="Activity Timeline">Activity Timeline Content</mat-tab>
+      </mat-tab-group>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

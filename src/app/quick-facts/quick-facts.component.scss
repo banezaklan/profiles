@@ -1,0 +1,86 @@
+@import "../../custom";
+@import "../../circle.css";
+.side-content-card {
+  margin: 5px;
+  border-radius: 1px !important;
+  padding: 5px;
+
+  ::ng-deep .mat-card-header-text {
+    margin: 0 !important;
+  }
+  .mat-card-title {
+    font-size: 13px !important;
+  }
+
+
+}
+
+.qfact-card {
+  padding-top: 10px;
+  .qfact-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    //flex-direction: row;
+    //align-items: flex-start;
+    //flex-wrap: nowrap;
+    //justify-content: flex-start;
+    .qfact-header-title {
+      //align-self: flex-start;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .qfact-header-shortcut {
+      color: $accent;
+      .mat-icon {
+        font-size: 20px;
+      }
+    }
+  }
+  .mat-divider{
+    position: unset;
+  }
+}
+
+.qfact-data-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  .qfact-row {
+    display: flex;
+    flex-direction: row;
+    .qfact-column {
+      p {
+        padding-left: 10px;
+        margin: 0;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .icon-other-facts {
+        color: gray;
+        font-size: 17px;
+      }
+    }
+
+  }
+
+}
+.qfact-row-justify {
+  justify-content: space-around;
+}
+#status-qfact-icon{
+  color: darkgoldenrod;
+}
+#score-gauge {
+  font-size: 30px;
+}
+
+#qfact-other-facts-table {
+  .qfact-row {
+    .description-wider {
+      width: 100px;
+    }
+  }
+}

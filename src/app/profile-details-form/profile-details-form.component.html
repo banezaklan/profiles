@@ -1,0 +1,157 @@
+<mat-card class="wrapper-content-card">
+  <mat-card class="inner-content-card">
+    <mat-card-header>
+      <mat-card-title>Profile Detail</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ng-container *ngIf="guest">
+        <mat-accordion class="profile-details-field-list">
+
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Prefix
+              </mat-panel-title>
+              <mat-panel-description>
+                {{guest.prefix}}
+                <mat-icon class="icon-edit">edit</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-form-field>
+              <input matInput placeholder="Prefix" value="{{guest.prefix}}">
+            </mat-form-field>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                First Name
+              </mat-panel-title>
+              <mat-panel-description>
+                {{guest.first_name}}
+                <mat-icon class="icon-edit">edit</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-form-field>
+              <input matInput placeholder="First Name" value="{{guest.first_name}}">
+            </mat-form-field>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Last Name
+              </mat-panel-title>
+              <mat-panel-description>
+                {{guest.last_name}}
+                <mat-icon class="icon-edit">edit</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-form-field>
+              <input matInput placeholder="Last Name" value="{{guest.last_name}}">
+            </mat-form-field>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Suffix
+              </mat-panel-title>
+              <mat-panel-description>
+                {{guest.suffix}}
+                <mat-icon class="icon-edit">edit</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-form-field>
+              <input matInput placeholder="Suffix" value="{{guest.suffix}}">
+            </mat-form-field>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Loyalty Member ID
+              </mat-panel-title>
+              <mat-panel-description>
+                {{guest.loyalty_member_id}}
+                <mat-icon class="icon-edit">edit</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-form-field>
+              <input matInput placeholder="Loyalty Member ID" value="{{guest.loyalty_member_id}}">
+            </mat-form-field>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Phone
+              </mat-panel-title>
+              <mat-panel-description>
+                {{guest.phone}}
+                <mat-icon class="icon-edit">edit</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-form-field>
+              <input matInput placeholder="Phone" value="{{guest.phone}}">
+            </mat-form-field>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Address
+              </mat-panel-title>
+              <mat-panel-description>
+                {{guest.address}}
+                <mat-icon class="icon-edit">edit</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-form-field>
+              <input matInput placeholder="Address" value="{{guest.address}}">
+            </mat-form-field>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Birthdate
+              </mat-panel-title>
+              <mat-panel-description>
+                {{guest.birthdate}}
+                <mat-icon class="icon-edit">edit</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker1" placeholder="Angular forms" [formControl]="date">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Language Preference
+              </mat-panel-title>
+              <mat-panel-description>
+                English
+                <mat-icon class="icon-edit">edit</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+          </mat-expansion-panel>
+
+        </mat-accordion>
+      </ng-container>
+    </mat-card-content>
+  </mat-card>
+</mat-card>

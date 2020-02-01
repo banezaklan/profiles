@@ -1,0 +1,57 @@
+.wrapper-content-card {
+  margin: 10px;
+}
+
+.inner-content-card {
+  background: whitesmoke;
+}
+
+.content-container {
+  margin-top: -56px;
+  margin-left: 15px;
+  background: transparent;
+
+}
+
+.mat-tab-label {
+  //min-width: 25px !important;
+  //padding: 5px;
+  background-color: transparent;
+  color: white;
+  opacity: 1 !important;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+  //min-width: 25px !important;
+  //padding: 5px;
+  background-color: transparent;
+  color: white;
+  opacity: 1 !important;
+  font-weight: 500;
+}
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+  background-color: white !important;
+  height: 3px !important;
+}
+
+.mat-tab-group {
+  //margin-top: -60px;
+}
+
+.side-drawer {
+  width: 20%;
+  max-width: 300px;
+  min-width: 200px;
+  background: transparent;
+  border: none;
+}
+
+.mat-tab-body-wrapper {
+  padding-top: 10px;
+  height: 700px;
+}

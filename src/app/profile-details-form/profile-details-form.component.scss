@@ -1,0 +1,27 @@
+.profile-details-field-list .mat-expansion-panel-header-title,
+.profile-details-field-list .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.profile-details-field-list .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: black;
+  font-weight: 600;
+  margin-right: -3px;
+}
+
+mat-form-field {
+  margin-right: 13px;
+}
+
+.profile-details-field-list .mat-expansion-panel-header-title {
+  font-size: 13px;
+  color: gray;
+}
+
+.icon-edit {
+  color: gray;
+  font-size: 18px;
+}
