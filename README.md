@@ -15,7 +15,7 @@ I haven't been able to setup the tests for guest.component properly. It would ta
 
 #### Requirements
 
-The code was successfully run and tested on node version v10.16.3
+The code was successfully run and tested on Windows, node version v10.16.3
 
 #### Installation
 - Clone the repo.
@@ -23,3 +23,12 @@ The code was successfully run and tested on node version v10.16.3
 - After it completes, run `ng serve`
 - To run tests, `ng test`
 
+#### Differences to specifications
+Screenshots of the original design are somewhat obsolete compared to current Angular material specs.
+I tried to keep the UI as close to specs as seemed reasonable when you take into account twisting the standard
+Angluar material framework components and layout to make it resemble the design.
+
+Also on the master page, the search i interactive, and not activated by clicking the button as requested.
+It would be my proposal to a UI designer as better solution, but it certainly could be easily made as requested. 
+
+Hope I got the point of the assignment.
