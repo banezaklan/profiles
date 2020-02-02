@@ -3,7 +3,6 @@ import { Guest } from '../guest';
 import { Router, ActivatedRoute } from '@angular/router';
 import { GuestsService } from '../guests.service';
 import { ViewEncapsulation} from '@angular/core';
-// import { QuickFactsComponent } from '../quick-facts/quick-facts.component';
 
 @Component({
   selector: 'app-guest-detail',
@@ -12,7 +11,7 @@ import { ViewEncapsulation} from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class GuestDetailComponent implements OnInit {
-  @Input() guest: Guest;
+  guest: Guest;
   private  id: number;
   constructor(
     private router: Router,

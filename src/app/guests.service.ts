@@ -2,16 +2,15 @@ import { Injectable } from '@angular/core';
 import { Guest} from './guest';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import {concatMap, catchError, map, tap, scan, first, single} from 'rxjs/operators';
-import { forkJoin, zip, concat } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { zip } from 'rxjs';
 import { SearchParams } from './search-params';
-import {Sort} from '@angular/material';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GuestsService {
-  private guestsUrl = 'api/guests';
+  guestsUrl = 'api/guests';
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
@@ -37,7 +36,7 @@ export class GuestsService {
   searchGuests(searchParams: SearchParams): Observable<Guest[]> {
 
     const reqs = [];
-    console.log('searchGuests', searchParams);
+    console.log('guests.service searchGuests', searchParams);
     if (typeof searchParams.term !== 'undefined' && searchParams.term !== '') {
       reqs.push(this.http.get<Guest[]>(`${this.guestsUrl}/?first_name=${searchParams.term}`));
       reqs.push(this.http.get<Guest[]>(`${this.guestsUrl}/?last_name=${searchParams.term}`));

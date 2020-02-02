@@ -54,8 +54,6 @@ export class GuestsComponent implements OnInit {
 
     const s = new SearchParams();
     s.term = this.currentSearchTerm;
-    s.pageNumber = this.pageNumber;
-    s.pageSize = this.pageSize;
     s.sortSetup = this.sortSetup;
     console.log('executeSearch', s);
     this.searchTerms.next(s);
@@ -82,10 +80,6 @@ export class GuestsComponent implements OnInit {
         return res.slice(this.pageNumber * this.pageSize, (this.pageNumber + 1) * this.pageSize);
       })
     );
-  }
-
-  setPageSizeOptions(setPageSizeOptionsInput: string) {
-    this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str);
   }
 
   changePagination(event?: PageEvent) {

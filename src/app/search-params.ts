@@ -1,8 +1,10 @@
-import {Sort} from '@angular/material';
+import { Sort } from '@angular/material';
+import {HttpClient} from '@angular/common/http';
 
 export class SearchParams {
-  term: string;
-  pageNumber: number;
-  pageSize: number;
+  constructor() {
+    // this.sortSetup =
+  }
+  term = '';
   sortSetup: Sort;
 }
